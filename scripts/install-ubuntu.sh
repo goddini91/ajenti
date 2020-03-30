@@ -5,7 +5,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 echo ':: Installing repo key'
-wget http://repo.ajenti.org/debian/key -O- | apt-key add -
+wget http://repo.ajenti.org/debian/key -O | apt-key add -
 
 echo ':: Adding repo entry'
 echo "deb http://repo.ajenti.org/debian main main ubuntu" > /etc/apt/sources.list.d/ajenti.list
